@@ -1,0 +1,664 @@
+/*
+*	############################################################################
+*	
+*	---------------------------------------------------------------------
+*   
+*    ==== INFO ====
+*
+*   Theme Name : Nametheme
+*   Theme Url :  https://domniweb.com/
+*	  Author : Dominweb
+*	  Copyright	Copyright 2019 Domniweb - Kevin Kefane
+*   
+*   ==== CONTACT ====
+*
+*   Mail : monmail@gmail.com
+*   Discord : MonPseudo
+*
+*
+* --------------------------------------------------------------------
+*
+*	############################################################################
+*/
+
+
+
+/*=========================================
+  //--//-->   STYLES GENERALES   <--\\--\\
+==========================================*/
+*
+{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: lobster , sans-serif;
+}
+
+#active a
+{
+    color: #000 !important;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+    text-shadow: 0 0 5px #FED53F;
+}
+
+
+
+/*=========================================
+  //--//-->   NAVBAR   <--\\--\\
+==========================================*/
+.navbar
+{
+    background: transparent;
+}
+
+.navbar-nav
+{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.nav-link
+{
+    padding: 10px;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+    transition-duration: 0.4s;
+}
+
+.nav-link:hover
+{
+    color: #000;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+    text-shadow: 0 0 5px #FED53F;
+}
+
+.navbar-brand
+{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.navbar-brand img
+{
+    width: 100px;
+    height: 100px;
+    margin: 0 40px;
+    transition-duration: 0.3s;
+}
+
+.navbar a
+{
+    color: #fff;
+    font-size: 20px;
+}
+
+.nav-item .fas, .far
+{
+    margin-right: 10px;
+}
+
+button:focus
+{
+   outline: none;
+}
+
+/*=========================================
+  //--//-->   SLIDER   <--\\--\\
+==========================================*/
+.cont   
+{
+    margin-top: -126px;
+    max-height: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#test img
+{
+    width: 100%;
+}
+
+.btn-slide
+{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.btn-slide button
+{
+    background: none;
+    border: none;
+    font-size: 20px;
+}
+
+.btn-slide button:hover
+{
+    text-shadow: 0 0 10px #FED53F;
+}
+
+
+#play
+{
+    display: none;
+}
+
+/*=========================================
+  //--//-->   SLIDER   <--\\--\\
+==========================================*/
+#mapid 
+{ 
+    height: 500px; 
+    border-radius: 20px;
+    box-shadow: 0 0 20px #000;
+    transition-duration: 0.4s;
+}
+
+.leaflet-bar a
+{
+    background: #000 !important;
+    color: #fff !important;
+}
+
+/* .leaflet-control-attribution
+{
+    display: none;
+} */
+
+.leaflet-bar a:hover
+{
+    color: #FED53F !important;
+}
+
+/* .leaflet-bar
+{
+    box-shadow:  0 0 10px #FED53F !important;
+} */
+
+/*=========================================
+  //--//-->   MAIN  <--\\--\\
+==========================================*/
+.main
+{
+    text-align: center;
+    margin: 100px auto;
+    max-width: 800px;
+    color: #868E96;
+}
+
+.sep-main
+{
+    border: 3px solid #FED53F;
+    border-radius: 10px;
+    max-width: 150px;
+    margin: 25px auto;
+}
+
+.main h2
+{
+    margin-bottom: 20px;
+    color: #000;
+}
+/*=========================================
+  //--//-->   LEGENDS  <--\\--\\
+==========================================*/
+.legends h3
+{
+    text-align: center;
+}
+
+.legend_marker ul
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    list-style: none;
+}
+
+.legend_marker li
+{
+    padding-left: 40px;
+}
+
+.legend_marker img
+{
+    margin-bottom: 20px;
+    width: 40px;
+}
+
+/*=========================================
+  //--//-->   MAP  <--\\--\\
+==========================================*/
+#mapid:hover
+{
+    box-shadow: 0 0 30px #FED53F;
+}
+
+#mapid 
+{ 
+    height: 450px; 
+    border-radius: 20px;
+    box-shadow: 0 0 20px #000;
+    transition-duration: 0.4s;
+    width: 100%;
+}
+
+.map
+{
+    margin: 30px auto;
+} 
+
+/*=========================================
+  //--//--> PANEAU RESERVATION  <--\\--\\
+==========================================*/
+.infos
+{
+    margin-top: 40px;
+}
+
+.infos li
+{
+    list-style: none;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.infos span
+{
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+#adresse
+{
+    text-transform: lowercase;
+}
+
+#reservation .fas, .far
+{
+    margin-right: 5px;
+}
+
+#reservation
+{
+    display: none;
+    margin-left: 30px;
+    padding: 20px 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #000;
+    transition-duration: 0.4s;
+    max-width: 300px;
+}
+
+#reservation:hover
+{
+    box-shadow: 0 0 30px #FED53F;
+}
+
+.search h3
+{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.search
+{
+    text-align: center;
+}
+
+.sep
+{
+    border: 1px solid #FED53F;
+    max-width: 150px;
+    margin: 0 auto 20px auto;
+}
+
+#search
+{
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.fa-check, .fa-bicycle
+{
+    color: green;
+}
+
+#status
+{
+    background: green;
+    padding: 5px;
+    margin-left: 20px;
+    font-weight: normal;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 0 0 10px green;
+}
+
+.btn-reserv
+{
+    display:  flex;
+    background: #000;
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin: 25px auto 0 auto;
+}
+
+.btn-reserv:hover
+{
+    box-shadow: 0 0 15px #FED53F;
+    color: #FED53F;
+}
+
+.fa-toggle-on
+{
+    display: none;
+}
+
+.select_station a
+{
+    text-decoration: none;
+    color: #000;
+}
+
+#on_station
+{
+    display: none;
+}
+
+#on
+{
+    color: green;
+}
+
+#off
+{
+    color: red;
+}
+
+#on, #off
+{
+    float: right;
+    margin-top: 5px;
+}
+
+/*--/=== Confirmation reservation ===/--*/
+
+.infos-reservation li
+{
+    list-style: none;
+}
+
+#check
+{
+    display: none;
+}
+
+.button-resa
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#nom, #prenom
+{
+    background: #FFF;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.confirm-reservation
+{
+    max-width: 350px;
+}
+
+.canvas h4
+{
+    text-align: center;
+}
+
+#validation-reservation, #validation-add
+{
+    display: none;
+}
+
+.back a, .close-pannel a
+{
+    color: #000;
+}
+
+#close-pannel
+{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    font-size: 20px;
+}
+
+/*--/=== Confirmation ADD ===/--*/
+.title
+{
+    text-align: center;
+}
+
+#validation-add
+{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.adress_add
+{
+    text-shadow: 0 0 10px #FED53F;
+}
+
+#no_check
+{
+    color: red;
+}
+
+.adresseValue
+{
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/*=========================================
+  //--//--> CANVAS <--\\--\\
+==========================================*/
+
+.paint-canvas 
+{
+    border: 1px black solid;
+    display: block;
+}
+
+input
+{
+    display: none;
+}
+
+.js-paint 
+{
+    margin: 0 auto;
+}
+
+/*=========================================
+  //--//--> User RESERVATION  <--\\--\\
+==========================================*/
+#user-resa, #user-annulation 
+{
+    text-align: center;
+    max-width: 350px;
+    box-shadow: 0 0 20px #000;
+    border-radius: 10px;
+    padding: 10px;
+    /* display: none; */
+    margin:  0 auto;
+}
+
+#user-annulation h4
+{
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.user-sep
+{
+    border-top: 2px solid #FED53F;
+    max-width: 100px;
+    margin: 0 auto 20px auto;
+
+}
+
+#remove-resa
+{
+    border: none;
+    background: #000;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#result-adresse
+{
+    text-transform: lowercase;
+}
+
+#result, #user-info, #result-adresse, #velo-adresse
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#remove-resa:hover
+{
+    box-shadow: 0 0 10px #FED53F;
+}
+
+#velo-adresse, #adresseValue
+{
+    text-transform: lowercase;
+}
+
+#close-annulation
+{
+    color: #000;
+    float: right;
+}
+
+footer
+{
+    margin-top: 200px;
+}
+/*=========================================
+  //--//--> leaflet-cluster  <--\\--\\
+==========================================*/
+
+
+.leaflet-cluster-anim .leaflet-marker-icon, .leaflet-cluster-anim .leaflet-marker-shadow {
+	-webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.3s ease-in;
+	-moz-transition: -moz-transform 0.3s ease-out, opacity 0.3s ease-in;
+	-o-transition: -o-transform 0.3s ease-out, opacity 0.3s ease-in;
+	transition: transform 0.3s ease-out, opacity 0.3s ease-in;
+}
+
+.leaflet-cluster-spider-leg {
+	/* stroke-dashoffset (duration and function) should match with leaflet-marker-icon transform in order to track it exactly */
+	-webkit-transition: -webkit-stroke-dashoffset 0.3s ease-out, -webkit-stroke-opacity 0.3s ease-in;
+	-moz-transition: -moz-stroke-dashoffset 0.3s ease-out, -moz-stroke-opacity 0.3s ease-in;
+	-o-transition: -o-stroke-dashoffset 0.3s ease-out, -o-stroke-opacity 0.3s ease-in;
+	transition: stroke-dashoffset 0.3s ease-out, stroke-opacity 0.3s ease-in;
+}
+
+
+
+/*=========================================
+  //--//-->  MEDIA <--\\--\\
+==========================================*/
+@media only screen and (max-width: 768px)
+ {
+    /*--/=== navBar ===/--*/
+    .navbar-nav
+    {
+        height: 320px!important;
+    }
+
+
+    .nav-link
+    {
+        border: none !important;
+        color: #000 !important;
+        padding: 0;
+    }
+
+    .navbar-brand img
+    {
+        display: none !important;
+    }
+
+    /*--/=== LEGENDS MARKER ===/--*/
+
+    .legend_marker li
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /*--/=== PANEAU RESERVATION ===/--*/
+
+     #reservation 
+     {
+         margin: 30px auto;
+     }
+ }
+
+ @media only screen and (max-width: 500px)
+ {
+    .legend_marker ul
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+ }
+
+
+/* =============================================================================
+
+Extra small :  .col (Petit ecrans de téléphone en dessous de 576px)
+@media only screen and (max-width:576px)
+
+Small : sm (Ecran de telephone, encrans 576px et +)
+@media only screen and (min-width: 576px)
+
+Medium : md (Tablette, encrans 768px et +)
+@media only screen and (min-width: 768px)
+
+Large : lg (Ordinateur, encrans 992px et +)
+@media only screen and (min-width: 992px)
+
+Extra large : xl (large Ordinateur, encrans 1200px et +)
+@media only screen and (min-width: 768px)
+
+*/
+
+
+/*=========================================
+  //--//--> SEPARATION  <--\\--\\
+==========================================*/
+
+
+/*--/=== Separation ===/--*/
+

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<!---- META TAGS  -->
+<meta charset="UTF-8">
+<title>Projet Js Vélo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Bienvenue sur la meilleur apli de réservation de vélo"> 
+
+<!-- Favicons -->
+<!-- <link href="img/favicon.png" rel="icon">
+<link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+<!---- FONTS AWESOME - GOOGLE  -->
+<script src="https://kit.fontawesome.com/afe43229fc.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+
+<!---- BOOTSRAP Jqueries  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!---- BOOTSRAP Css * Js  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+
+<!---- MAIN STYLE  -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+crossorigin=""></script>
+
+<!-- ############################################################################
+*
+*    
+*   ==== INFO ====
+*
+*    Theme Name : Folio                                                         
+*    Theme URL : https://Domniweb.com/                                           
+*    Author : Domnivek                                                          
+*    Author URL : https://Domniweb.com/template                                 
+*                                                                               
+*   ==== CONTACT ====                                                           
+*                                                                               
+*   Mail : monmail@gmail.com                                                    
+*   Discord : MonPseudo                                                         
+*                                                                               
+*                                                                               
+ ############################################################################### -->
+</head>
+<body>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--/* NAVBAR */-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<nav class="navbar navbar-expand-md">
+
+    <!-- Collapse Button -->
+    <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span id="navbar-toggler-icon" class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+    <!-- Links -->
+        <ul class="navbar-nav ">
+                <li id="active" class="nav-item">
+                    <a class="nav-link" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Carte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">réservation</a>
+                </li class="nav-item"> 
+            <!-- navbar-brand -->
+            <a class="navbar-brand" href="#">
+                <img src="img/newlogo2.png" class="d-inline-block align-top" alt="#">
+            </a>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Espase client</a>
+            </li class="nav-item"> 
+            <li class="nav-item">
+                <a class="nav-link" href="#">A propos</a>
+            </li class="nav-item"> 
+            </li class="nav-item"> 
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--/* SLIDER */-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section>
+    <div class="cont" id="slider" >
+        <div id="test">
+            <img id="img1" name='slide'/>
+        </div>
+    </div>
+    <div class="btn-slide">
+        <button id="left"><i class="fas fa-chevron-left"></i></button>
+        <button id="stop"><i class="fas fa-pause"></i></button>
+        <button id="play"><i class="fas fa-play"></i></button>
+        <button id="right"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</section>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--/* Informations générales */-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="container">
+    <div class="main">
+        <h2>Les services Free Bike</h2>
+        <div class="sep-main"></div>
+        <p>
+            À chacun son service Free Bike ! <br>
+            Pour vous déplacer sur le territoire de Nantes decouvrez notre service Free Bike.
+            Trouvez votre mode de déplacement Free Bike pour vous faciliter le quotidien : à chacun sa manière d'être Free Bike.
+        </p>
+    </div>
+</section>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--/* MAP & PANEAU RESERVATION */-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="container">
+    <div class="legends">
+        <h3>Légende de la carte</h3>
+        <div class="legend_marker">
+            <ul>
+                <li><img src="img/marker_green.png" alt="">+ de 10 vélos en sation</li>
+                <li> <img src="img/marker_orange.png" alt="">Moins de 5 vélo en station</li>
+                <li><img src="img/marker_red.png" alt="">Station fermer</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row map">
+        <div class="col-md" id="mapid"></div>
+        <div id="reservation">
+            <div class="col-md" id="info-reservation">
+                <div class="close-pannel">
+                    <a href=""><i id="close-pannel" class="far fa-times-circle"></i></a>
+                </div>
+                <div class="search">
+                    <h3>Station vélo Free Bike </h3>
+                    <div class="sep"></div>
+                    <input id="search" class="" type="text" placeholder="Rechercher une rue">
+                </div>
+                <div class="infos">
+                    <ul>
+                        <li><i id="check" class="fas fa-check"></i>Etat actuel :<span id="status"></span></li>
+                        <li><i class="fas fa-map-marker-alt"></i>Adresse : <span id="adresse"></span></li>
+                        <li><i id="check_bike" class="fas fa-bicycle"></i>Vélo disponible : <span id="bike_dispo"></span></li>
+                        <li><i class="fas fa-parking"></i>Nombre de place libre : <span id="place_libre"></span></li>
+                        <!-- <li><i class="fas fa-parking"></i> Nombre de place totale : <span id="totale_place"></span></li> -->
+                        <li><i id="cb" class="far fa-credit-card"></i> Terminale de paiement : <span id="borne_cb"></span></li>
+                    </ul>
+                    <!-- <div class="select_station">
+                        <p><a id="off_station" href="">Uniqement les stations monétiser<i id="off" class="fas fa-toggle-off"></i></a></p>
+                        <p><a id="on_station" href="">Uniqement les stations monétiser<i id="on" class="fas fa-toggle-on"></i></a></p>
+                    </div> -->
+                    <input type="submit" id="btn-reserv" class="btn-reserv" value="Réserver">
+                </div>
+            </div>
+
+            <!-- Confirmation de reservation -->
+
+            <div class="col-md" class="confirm-reservation">
+                <div id="validation-reservation">
+                    <div class="back">
+                        <a href=""><i id="back" class="fas fa-arrow-left"></i></a>
+                    </div>
+                    <div class="title">
+                        <h3>Confirmez votre Réservation </h3>
+                        <div class="sep"></div>
+                        <p class="adresseValue">Adresse : <span id="adresseValue"></span></p>
+                    </div>
+                    <div class="infos-reservation">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" placeholder="Votre Nom" value="" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="last-name" placeholder="Votre Prénom" value="" required>
+                            </div>
+                            <p class="adresseValue">Adresse : <span id="adresseValue"></span></p>
+                            <div class="canvas">
+                                <h4>Votre signature :</h4>
+                                <input type="range" class="js-line-range"  value="1">
+                                <label class="js-range-value"></label>
+                                <canvas class="js-paint  paint-canvas" width="250" height="100" ></canvas>
+                            </div>
+                            <div class="button-resa">
+                                <input type="submit" id="remove-draw" class="btn-reserv" value="Effacer">
+                                <button type="submit" id="valider_resa" class="btn btn-reserv">Valider</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                    <div id="validation-add">
+                        <h4>Reservation enregistrer <i id="add_check" class="fas fa-check"></i></h4>
+                        <p><span id="result"></span><br> Votre vélo vous attends au : <br> <span id="result-adresse"></span></p>
+                        <p><span id="sign"></span><br> Votre signature : <br> <span id="result-sign"></span></p>
+                        <input type="submit" id="close_resa" class="btn-reserv" value="fermer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class=" container">
+        <div id="user-resa">
+            <h4>Votre Reservation</h4>
+            <div class="user-sep"></div>
+            <p><span id="user-info"></span><br> Votre vélo vous attends au : <br> <span id="velo-adresse"></span></p>
+            <button type="submit" id="remove-resa">Annuler la réservation</button>
+        </div>
+        
+        <div id="user-annulation">
+            <a href=""><i id="close-annulation" class="far fa-times-circle"></i></a>
+            <h4>Reservation annulée <i id="add_check" class="fas fa-check"></i></h4>
+        </div>
+    </div>
+    
+</section>
+
+<footer></footer>
+
+<!--/* CANVAS */-->
+
+<!-- JavaScript Libraries -->
+<script src="js/markerclusterer.js"></script>
+<script src="js/map.js"></script>
+<script src="js/slide.js"></script>
+<script src="js/canvas.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+
+
